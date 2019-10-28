@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>1028 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用jdbc访问数据库步骤？1.获取Connection对象。（DBConnection提供了数据库连接对象Connection）2.sql语句3.sql语句传入Connection，获取PrepareStatement对象4.执行（execte）语句 JSP html+css外部 script内嵌   1,JSP内置对象（后台控制） ​     （1）request             （5">
+  <meta name="description" content="访问数据库步骤：1 获取Connection对象（DBConnection提供数据库连接对象Connection）2 sql语句3sql语句传入Connection，获取PreparedStatement对象4执行（execute）语句. JSP九大内置对象（后台逻辑控制）： request请求  respose相应 session会话 application 应用  out pagecont">
 <meta property="og:type" content="article">
 <meta property="og:title" content="1028">
 <meta property="og:url" content="http://yoursite.com/2019/10/28/1028/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="使用jdbc访问数据库步骤？1.获取Connection对象。（DBConnection提供了数据库连接对象Connection）2.sql语句3.sql语句传入Connection，获取PrepareStatement对象4.执行（execte）语句 JSP html+css外部 script内嵌   1,JSP内置对象（后台控制） ​     （1）request             （5">
+<meta property="og:description" content="访问数据库步骤：1 获取Connection对象（DBConnection提供数据库连接对象Connection）2 sql语句3sql语句传入Connection，获取PreparedStatement对象4执行（execute）语句. JSP九大内置对象（后台逻辑控制）： request请求  respose相应 session会话 application 应用  out pagecont">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-28T01:37:45.152Z">
+<meta property="og:updated_time" content="2019-10-28T02:13:34.999Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1028">
-<meta name="twitter:description" content="使用jdbc访问数据库步骤？1.获取Connection对象。（DBConnection提供了数据库连接对象Connection）2.sql语句3.sql语句传入Connection，获取PrepareStatement对象4.执行（execte）语句 JSP html+css外部 script内嵌   1,JSP内置对象（后台控制） ​     （1）request             （5">
+<meta name="twitter:description" content="访问数据库步骤：1 获取Connection对象（DBConnection提供数据库连接对象Connection）2 sql语句3sql语句传入Connection，获取PreparedStatement对象4执行（execute）语句. JSP九大内置对象（后台逻辑控制）： request请求  respose相应 session会话 application 应用  out pagecont">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -167,26 +167,25 @@
 
         
         <a href="/2019/10/28/1028/" class="archive-article-date">
-  	<time datetime="2019-10-28T01:37:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
+  	<time datetime="2019-10-28T02:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>使用jdbc访问数据库步骤</strong>？<br>1.获取Connection对象。（DBConnection提供了数据库连接对象Connection）<br>2.sql语句<br>3.sql语句传入Connection，获取PrepareStatement对象<br>4.执行（execte）语句</p>
-<p><strong>JSP</strong></p>
-<p>html+css外部</p>
-<p>script内嵌</p>
-<p>  1,JSP内置对象（后台控制）</p>
-<p>​     （1）request             （5）out                  （9）exception</p>
-<p>​     （2）response          （6）pagecontext</p>
-<p>​     （3）session             （7）config</p>
-<p>​     （4）application       （8）page      </p>
-<p><strong>servlet</strong></p>
-<p>​            a .html →servlet→b.html</p>
-<p>​                                  ↓           ➷选择传输对象</p>
-<p>​                        tomcat服务器     c.html</p>
+        <p>  访问数据库步骤：<br>1 获取Connection对象（DBConnection提供数据库连接对象Connection）<br>2 sql语句<br>3sql语句传入Connection，获取PreparedStatement对象<br>4执行（execute）语句.</p>
+<p>JSP九大内置对象（后台逻辑控制）：</p>
+<p>request请求  respose相应 session会话 application 应用</p>
+<p> out pagecontext config page exception </p>
+<p>A.html-servlet-B.html</p>
+<p>-—–</p>
+<p>. servlet 是用来注册Servlet的存放地址 servlet-name 这个是我们要注册servlet的名字 servlet-class 这个就 </p>
+<p>是指向我们要注册的servlet 的类地址, 要带包路径。</p>
+<p>3 / 6 </p>
+<p>\2. servlet-mapping 是用来配置我们注册的组件的访问路径 </p>
+<p>\3. servlet-name 要与前面写的servlet的名字一致 </p>
+<p>\4. url-pattern 配置这个组件的访问路径</p>
 
       
 
@@ -281,8 +280,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2019/10/22/1022作业/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
+    <a href="/2019/10/28/关于jsp和servlet的理解/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于jsp和servlet的理解</div>
       <i class="icon-circle-right"></i>
     </a>
   

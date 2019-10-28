@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>关于jsp和servlet的理解 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JSP实现登录功能第一步: 创建login.jsp登录页面在所创建的动态项目his_v1中，于WebContent文件夹下创建login.jsp。其显示效果类似于下图: 对应源代码如下： &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!– 需要注意的是:xml配置文件中的url-pattern这里写的是/LoginServlet，而在jsp中form表单的action写的是Login">
+  <meta name="description" content="使用jdbc访问数据库步骤？1.获取Connection对象。（DBConnection提供了数据库连接对象Connection）2.sql语句3.sql语句传入Connection，获取PrepareStatement对象4.执行（execte）语句 JSP html+css外部 script内嵌   1,JSP内置对象（后台控制） ​     （1）request             （5">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/2019/10/22/1022作业/index.html">
+<meta property="og:title" content="关于jsp和servlet的理解">
+<meta property="og:url" content="http://yoursite.com/2019/10/28/关于jsp和servlet的理解/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="JSP实现登录功能第一步: 创建login.jsp登录页面在所创建的动态项目his_v1中，于WebContent文件夹下创建login.jsp。其显示效果类似于下图: 对应源代码如下： &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!– 需要注意的是:xml配置文件中的url-pattern这里写的是/LoginServlet，而在jsp中form表单的action写的是Login">
+<meta property="og:description" content="使用jdbc访问数据库步骤？1.获取Connection对象。（DBConnection提供了数据库连接对象Connection）2.sql语句3.sql语句传入Connection，获取PrepareStatement对象4.执行（execte）语句 JSP html+css外部 script内嵌   1,JSP内置对象（后台控制） ​     （1）request             （5">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-23T00:03:31.199Z">
+<meta property="og:updated_time" content="2019-10-28T01:29:39.978Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="JSP实现登录功能第一步: 创建login.jsp登录页面在所创建的动态项目his_v1中，于WebContent文件夹下创建login.jsp。其显示效果类似于下图: 对应源代码如下： &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!– 需要注意的是:xml配置文件中的url-pattern这里写的是/LoginServlet，而在jsp中form表单的action写的是Login">
+<meta name="twitter:title" content="关于jsp和servlet的理解">
+<meta name="twitter:description" content="使用jdbc访问数据库步骤？1.获取Connection对象。（DBConnection提供了数据库连接对象Connection）2.sql语句3.sql语句传入Connection，获取PrepareStatement对象4.执行（execte）语句 JSP html+css外部 script内嵌   1,JSP内置对象（后台控制） ​     （1）request             （5">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,82 +154,39 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-1022作业" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-关于jsp和servlet的理解" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      关于jsp和servlet的理解
+    </h1>
+  
+
+        
+        <a href="/2019/10/28/关于jsp和servlet的理解/" class="archive-article-date">
+  	<time datetime="2019-10-28T01:01:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="JSP"><a href="#JSP" class="headerlink" title="JSP"></a>JSP</h1><h2 id="实现登录功能"><a href="#实现登录功能" class="headerlink" title="实现登录功能"></a>实现登录功能</h2><h2 id="第一步-创建login-jsp登录页面"><a href="#第一步-创建login-jsp登录页面" class="headerlink" title="第一步: 创建login.jsp登录页面"></a>第一步: 创建login.jsp登录页面</h2><p>在所创建的动态项目his_v1中，于WebContent文件夹下创建login.jsp。其显示效果类似于下图:</p>
-<p>对应源代码如下：</p>
-<pre><code>&lt;html&gt;
-&lt;body&gt;
-&lt;!– 需要注意的是:xml配置文件中的url-pattern这里写的是/LoginServlet，而在jsp中form表单的action写的是LoginServlet,而不是/LoginServlet。 –&gt;
-&lt;form action=”LoginServlet” method=”post”&gt;
-&lt;table&gt;
-&lt;tr&gt;
-&lt;td colspan=”2”&gt;登录窗口&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;用户名：&lt;/td&gt;
-&lt;td&gt;&lt;input type=”text” name=”username” /&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;密码：&lt;/td&gt;
-&lt;td&gt;&lt;input type=”password” name=”password” /&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td colspan=”2”&gt;&lt;input type=”submit” value=”登录” /&gt; &lt;a href=”register.jsp”&gt;注册&lt;/a&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre><h2 id="第二步：创建处理登录判定的Servlet-LoginServlet"><a href="#第二步：创建处理登录判定的Servlet-LoginServlet" class="headerlink" title="第二步：创建处理登录判定的Servlet:LoginServlet"></a>第二步：创建处理登录判定的Servlet:LoginServlet</h2><p>在第一步中的login.jsp中，我们需要特别注意这句代码：</p>
-<pre><code>&lt;form action=”LoginServlet” method=”post”&gt;</code></pre><p>这行代码中有两个属性，说明如下：</p>
-<p>action属性：点击登录按钮后，接下来的动作，这里是转到了LoginServlet。</p>
-<p>method属性：表单中数据的提交方式。</p>
-<p>接下来，再src文件夹下创建LoginServlet类，其中的doPost()方法参考代码如下：</p>
-<pre><code>    /**
-    * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-    */
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // TODO Auto-generated method stub
-        request.setCharacterEncoding(&quot;utf-8&quot;);//设置request编码
-        response.setContentType(&quot;text/html;charset=utf-8&quot;);//设置response编码
-        String id = request.getParameter(&quot;username&quot;);//获取表单用户名
-        String pwd = request.getParameter(&quot;password&quot;);//获取表单密码
-        if(pwd==null || pwd.equals(&quot;&quot;)){//若没有密码，或为空
-            response.getWriter().print(&quot;密码不能为空！&quot;);//在当前页面(login.jsp)添加显示一句话。
-            return;//跳出doPost()方法，等待login.jsp页面再次提交表单。
-        }
-        if(id==null || id.equals(&quot;&quot;)){//若没有账号，或为空
-            response.getWriter().print(&quot;用户名不能为空！&quot;);//在当前页面(login.jsp)添加显示一句话。
-            return;//跳出doPost()方法，等待login.jsp页面再次提交表单。
-        }
-        if(id.equals(&quot;sam&quot;) &amp;&amp; pwd.equals(&quot;123&quot;)) {//用户名、密码正确
-            request.getRequestDispatcher(&quot;welcome.jsp&quot;).forward(request, response);//页面转发
-            //页面跳转的方式：(1)转发：foward(地址栏地址不变);(2)重定向：redirect(地址栏地址变化)
-        }else//用户名、密码错误
-        {
-            response.getWriter().print(&quot;用户名或密码有误，请重新输入！&quot;);//在当前页面(login.jsp)添加显示一句话。
-            return;//跳出doPost()方法，等待login.jsp页面再次提交表单。
-        }
-    }
-}</code></pre><h2 id="第三步：LoginServlet在项目配置文件web-xml中注册："><a href="#第三步：LoginServlet在项目配置文件web-xml中注册：" class="headerlink" title="第三步：LoginServlet在项目配置文件web.xml中注册："></a>第三步：LoginServlet在项目配置文件web.xml中注册：</h2><pre><code>&lt;servlet&gt;&lt;/servlet&gt;
-&lt;servlet-name&gt;&lt;/servlet-name&gt;
-&lt;servlet-class&gt;&lt;/servlet-class&gt;
-&lt;servlet-mapping&gt;&lt;/servlet-mapping&gt;
-&lt;url-pattern&gt;&lt;/url-pattern&gt;
-这五个都是注册一个servlet组件必须的节点</code></pre><p>1，是用来注册Servlet的存放地址<br>这个是我们要注册servlet的名字<br>这个就是指向我们要注册的servlet 的类地址, 要带包路径<br>以上两个在一个servlet 节点之下.</p>
-<p>2， 是用来配置我们注册的组件的访问路径,<br>这个要与前面写的servlet的名字一致</p>
-<p><url-pattern> 配置这个组件的访问路径</url-pattern></p>
-<p> 以上两个在一个servlet-mapping 节点之下.<br>接续第一步、第二步内容为例：</p>
-<p>LoginServlet<br>sam.his.servlet.LoginServlet </p>
-<p>LoginServlet<br>/LoginServlet </p>
-<h2 id="第四步：实施登录"><a href="#第四步：实施登录" class="headerlink" title="第四步：实施登录"></a>第四步：实施登录</h2><p>注意：需要再添加一个登录成功页面welcome.jsp(参考第二步的doPost方法中代码)</p>
-<p>项目部署在tomcat服务器上，运行后在地址栏输入地址访问项目的login.jsp页面，表单中录入用户名、密码，尝试登录。</p>
+        <p><strong>使用jdbc访问数据库步骤</strong>？<br>1.获取Connection对象。（DBConnection提供了数据库连接对象Connection）<br>2.sql语句<br>3.sql语句传入Connection，获取PrepareStatement对象<br>4.执行（execte）语句</p>
+<p><strong>JSP</strong></p>
+<p>html+css外部</p>
+<p>script内嵌</p>
+<p>  1,JSP内置对象（后台控制）</p>
+<p>​     （1）request             （5）out                  （9）exception</p>
+<p>​     （2）response          （6）pagecontext</p>
+<p>​     （3）session             （7）config</p>
+<p>​     （4）application       （8）page      </p>
+<p><strong>servlet</strong></p>
+<p>​            a .html →servlet→b.html</p>
+<p>​                                  ↓           ➷选择传输对象</p>
+<p>​                        tomcat服务器     c.html</p>
 
       
 
@@ -309,7 +266,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/22/1022作业/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/28/关于jsp和servlet的理解/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -323,17 +280,8 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/28/关于jsp和servlet的理解/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          关于jsp和servlet的理解
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/21/课堂笔记1021/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/10/22/1022作业/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title"></div>
       <i class="icon-circle-right"></i>
     </a>

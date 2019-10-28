@@ -152,6 +152,81 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-关于jsp和servlet的理解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/28/关于jsp和servlet的理解/">关于jsp和servlet的理解</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/28/关于jsp和servlet的理解/" class="archive-article-date">
+  	<time datetime="2019-10-28T01:01:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>使用jdbc访问数据库步骤</strong>？<br>1.获取Connection对象。（DBConnection提供了数据库连接对象Connection）<br>2.sql语句<br>3.sql语句传入Connection，获取PrepareStatement对象<br>4.执行（execte）语句</p>
+<p><strong>JSP</strong></p>
+<p>html+css外部</p>
+<p>script内嵌</p>
+<p>  1,JSP内置对象（后台控制）</p>
+<p>​     （1）request             （5）out                  （9）exception</p>
+<p>​     （2）response          （6）pagecontext</p>
+<p>​     （3）session             （7）config</p>
+<p>​     （4）application       （8）page      </p>
+<p><strong>servlet</strong></p>
+<p>​            a .html →servlet→b.html</p>
+<p>​                                  ↓           ➷选择传输对象</p>
+<p>​                        tomcat服务器     c.html</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/28/关于jsp和servlet的理解/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-1022作业" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -185,9 +260,7 @@
 &lt;/form&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre><h2 id="第二步：创建处理登录判定的Servlet-LoginServlet"><a href="#第二步：创建处理登录判定的Servlet-LoginServlet" class="headerlink" title="第二步：创建处理登录判定的Servlet:LoginServlet"></a>第二步：创建处理登录判定的Servlet:LoginServlet</h2><p>在第一步中的login.jsp中，我们需要特别注意这句代码：</p>
-<form action="”LoginServlet”" method="”post”">
-
-<p>这行代码中有两个属性，说明如下：</p>
+<pre><code>&lt;form action=”LoginServlet” method=”post”&gt;</code></pre><p>这行代码中有两个属性，说明如下：</p>
 <p>action属性：点击登录按钮后，接下来的动作，这里是转到了LoginServlet。</p>
 <p>method属性：表单中数据的提交方式。</p>
 <p>接下来，再src文件夹下创建LoginServlet类，其中的doPost()方法参考代码如下：</p>
@@ -230,7 +303,7 @@
 <p>LoginServlet<br>/LoginServlet </p>
 <h2 id="第四步：实施登录"><a href="#第四步：实施登录" class="headerlink" title="第四步：实施登录"></a>第四步：实施登录</h2><p>注意：需要再添加一个登录成功页面welcome.jsp(参考第二步的doPost方法中代码)</p>
 <p>项目部署在tomcat服务器上，运行后在地址栏输入地址访问项目的login.jsp页面，表单中录入用户名、密码，尝试登录。</p>
-</form>
+
       
 
       

@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>关于jsp和servlet的理解 | Hexo</title>
+  <title>1029 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用jdbc访问数据库步骤？1.获取Connection对象。（DBConnection提供了数据库连接对象Connection）2.sql语句3.sql语句传入Connection，获取PrepareStatement对象4.执行（execte）语句 JSP html+css外部 script内嵌   1,JSP内置对象（后台控制） ​     （1）request             （5">
+  <meta name="description" content="# jsp/servlet异同点  ##一,相同点：  处理后台逻辑，作为MVC控制；  9个内置对象（）。  ##二，不同点：  1） jsp作为前端显示页面，servlet只能作为后台控制；  2） jsp常作为小型项目，servlet常作为大型项目  3） jsp可内嵌html，el，jstl，和java，而servlet只能有java；  4） jsp控制不需要项目中去注册，servlet">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于jsp和servlet的理解">
-<meta property="og:url" content="http://yoursite.com/2019/10/28/关于jsp和servlet的理解/index.html">
+<meta property="og:title" content="1029">
+<meta property="og:url" content="http://yoursite.com/2019/10/29/1029/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="使用jdbc访问数据库步骤？1.获取Connection对象。（DBConnection提供了数据库连接对象Connection）2.sql语句3.sql语句传入Connection，获取PrepareStatement对象4.执行（execte）语句 JSP html+css外部 script内嵌   1,JSP内置对象（后台控制） ​     （1）request             （5">
+<meta property="og:description" content="# jsp/servlet异同点  ##一,相同点：  处理后台逻辑，作为MVC控制；  9个内置对象（）。  ##二，不同点：  1） jsp作为前端显示页面，servlet只能作为后台控制；  2） jsp常作为小型项目，servlet常作为大型项目  3） jsp可内嵌html，el，jstl，和java，而servlet只能有java；  4） jsp控制不需要项目中去注册，servlet">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-28T02:01:45.631Z">
+<meta property="og:updated_time" content="2019-10-29T00:35:24.732Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于jsp和servlet的理解">
-<meta name="twitter:description" content="使用jdbc访问数据库步骤？1.获取Connection对象。（DBConnection提供了数据库连接对象Connection）2.sql语句3.sql语句传入Connection，获取PrepareStatement对象4.执行（execte）语句 JSP html+css外部 script内嵌   1,JSP内置对象（后台控制） ​     （1）request             （5">
+<meta name="twitter:title" content="1029">
+<meta name="twitter:description" content="# jsp/servlet异同点  ##一,相同点：  处理后台逻辑，作为MVC控制；  9个内置对象（）。  ##二，不同点：  1） jsp作为前端显示页面，servlet只能作为后台控制；  2） jsp常作为小型项目，servlet常作为大型项目  3） jsp可内嵌html，el，jstl，和java，而servlet只能有java；  4） jsp控制不需要项目中去注册，servlet">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,40 +154,35 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-关于jsp和servlet的理解" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-1029" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      关于jsp和servlet的理解
+      1029
     </h1>
   
 
         
-        <a href="/2019/10/28/关于jsp和servlet的理解/" class="archive-article-date">
-  	<time datetime="2019-10-28T01:01:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
+        <a href="/2019/10/29/1029/" class="archive-article-date">
+  	<time datetime="2019-10-29T00:33:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>使用jdbc访问数据库步骤</strong>？<br>1.获取Connection对象。（DBConnection提供了数据库连接对象Connection）<br>2.sql语句<br>3.sql语句传入Connection，获取PrepareStatement对象<br>4.执行（execte）语句</p>
-<p><strong>JSP</strong></p>
-<p>html+css外部</p>
-<p>script内嵌</p>
-<p>  1,JSP内置对象（后台控制）</p>
-<p>​     （1）request             （5）out                  （9）exception</p>
-<p>​     （2）response          （6）pagecontext</p>
-<p>​     （3）session             （7）config</p>
-<p>​     （4）application       （8）page      </p>
-<p><strong>servlet</strong></p>
-<p>​            a .html →servlet→b.html</p>
-<p>​                                  ↓           ➷选择传输对象</p>
-<p>​                        tomcat服务器     c.html</p>
-
+        <pre><code># jsp/servlet异同点
+ ##一,相同点：
+ 处理后台逻辑，作为MVC控制；
+ 9个内置对象（）。
+ ##二，不同点：
+ 1） jsp作为前端显示页面，servlet只能作为后台控制；
+ 2） jsp常作为小型项目，servlet常作为大型项目
+ 3） jsp可内嵌html，el，jstl，和java，而servlet只能有java；
+ 4） jsp控制不需要项目中去注册，servlet必须注册</code></pre>
       
 
       
@@ -266,7 +261,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/28/关于jsp和servlet的理解/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/29/1029/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -280,18 +275,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/28/1028/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          1028
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/22/1022作业/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
+    <a href="/2019/10/28/”1028-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">”1028</div>
       <i class="icon-circle-right"></i>
     </a>
   

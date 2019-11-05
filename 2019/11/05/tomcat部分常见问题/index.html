@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>jsp试是什么？ | Hexo</title>
+  <title>tomcat部分常见问题 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JSP是什么？每一种技术的名称都一定说明了它的作用。jsp的全称为：java server pages（翻译:java服务器页面），既然它是java的服务器页面，则它能支持java的代码编写的web页面（.jsp后缀结尾的html文件）。 1、jsp在&amp;lt;%, %&amp;gt;中编写java代码 2、既然它是java的服务器页面，那它就基于sun的JDK来执行，也就是说jsp文件是java文件的某种">
+  <meta name="description" content="问题一：​           指定目录下没有访问的文件，这是最常见的，也是最容易解决的。只需要将访问的文件（如：a.html）放到指定目录下即可。 问题二：​         将访问的文件(如：b.html)放到了webapps的根目录下，然后访问http://localhost:8080/b.html，这种方式也会造成404错误，               解决方法是在webapps下新建一">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jsp试是什么？">
-<meta property="og:url" content="http://yoursite.com/2019/11/01/jsp试是什么？/index.html">
+<meta property="og:title" content="tomcat部分常见问题">
+<meta property="og:url" content="http://yoursite.com/2019/11/05/tomcat部分常见问题/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="JSP是什么？每一种技术的名称都一定说明了它的作用。jsp的全称为：java server pages（翻译:java服务器页面），既然它是java的服务器页面，则它能支持java的代码编写的web页面（.jsp后缀结尾的html文件）。 1、jsp在&amp;lt;%, %&amp;gt;中编写java代码 2、既然它是java的服务器页面，那它就基于sun的JDK来执行，也就是说jsp文件是java文件的某种">
+<meta property="og:description" content="问题一：​           指定目录下没有访问的文件，这是最常见的，也是最容易解决的。只需要将访问的文件（如：a.html）放到指定目录下即可。 问题二：​         将访问的文件(如：b.html)放到了webapps的根目录下，然后访问http://localhost:8080/b.html，这种方式也会造成404错误，               解决方法是在webapps下新建一">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-01T05:31:16.007Z">
+<meta property="og:updated_time" content="2019-11-05T00:58:29.053Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jsp试是什么？">
-<meta name="twitter:description" content="JSP是什么？每一种技术的名称都一定说明了它的作用。jsp的全称为：java server pages（翻译:java服务器页面），既然它是java的服务器页面，则它能支持java的代码编写的web页面（.jsp后缀结尾的html文件）。 1、jsp在&amp;lt;%, %&amp;gt;中编写java代码 2、既然它是java的服务器页面，那它就基于sun的JDK来执行，也就是说jsp文件是java文件的某种">
+<meta name="twitter:title" content="tomcat部分常见问题">
+<meta name="twitter:description" content="问题一：​           指定目录下没有访问的文件，这是最常见的，也是最容易解决的。只需要将访问的文件（如：a.html）放到指定目录下即可。 问题二：​         将访问的文件(如：b.html)放到了webapps的根目录下，然后访问http://localhost:8080/b.html，这种方式也会造成404错误，               解决方法是在webapps下新建一">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,31 +154,29 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-jsp试是什么？" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-tomcat部分常见问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      jsp试是什么？
+      tomcat部分常见问题
     </h1>
   
 
         
-        <a href="/2019/11/01/jsp试是什么？/" class="archive-article-date">
-  	<time datetime="2019-11-01T05:29:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-01</time>
+        <a href="/2019/11/05/tomcat部分常见问题/" class="archive-article-date">
+  	<time datetime="2019-11-05T00:56:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="JSP是什么？"><a href="#JSP是什么？" class="headerlink" title="JSP是什么？"></a>JSP是什么？</h1><p>每一种技术的名称都一定说明了它的作用。jsp的全称为：java server pages（翻译:java服务器页面），既然它是java的服务器页面，则它能支持java的代码编写的web页面（.jsp后缀结尾的html文件）。</p>
-<p>1、jsp在&lt;%, %&gt;中编写java代码</p>
-<p>2、既然它是java的服务器页面，那它就基于sun的JDK来执行，也就是说jsp文件是java文件的某种伪格式。</p>
-<p>3、jsp的运行。1、jsp在tomcat（以后介绍）发布，2、在浏览器访问过程中jsp会生成：jsp名称_jsp.java和jsp名称_jsp.class，这就验证了（2、），说明jsp在执行过程中先生成java文件再使用java语法编译，从而在jvm（虚拟机）执行。</p>
-<p>从上面可以看出，jsp是网站的view（视图），同时还能提供java的执行和显示结果。它的作用涵盖了html和java的功能。</p>
+        <h3 id="问题一："><a href="#问题一：" class="headerlink" title="问题一："></a>问题一：</h3><p>​           指定目录下没有访问的文件，这是最常见的，也是最容易解决的。只需要将访问的文件（如：a.html）放到指定目录下即可。</p>
+<h3 id="问题二："><a href="#问题二：" class="headerlink" title="问题二："></a>问题二：</h3><p>​         将访问的文件(如：b.html)放到了webapps的根目录下，然后访问<a href="http://localhost:8080/b.html，这种方式也会造成404错误，" target="_blank" rel="noopener">http://localhost:8080/b.html，这种方式也会造成404错误，</a>               解决方法是在webapps下新建一个目录（如：test），然后将b.html 放到test目录里面。访问网址  <a href="http://localhost:8080/test/b.html" target="_blank" rel="noopener">http://localhost:8080/test/b.html</a></p>
+<h3 id="问题三："><a href="#问题三：" class="headerlink" title="问题三："></a>问题三：</h3><p>​         访问的目录下的web.xml 文件内容有误。解放方法是可以直接删除web.xml或写入下面的内容  </p>
 
       
 
@@ -258,7 +256,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/01/jsp试是什么？/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/05/tomcat部分常见问题/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -272,18 +270,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/05/tomcat部分常见问题/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          tomcat部分常见问题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/29/1029/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">1029</div>
+    <a href="/2019/11/01/jsp试是什么？/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jsp试是什么？</div>
       <i class="icon-circle-right"></i>
     </a>
   

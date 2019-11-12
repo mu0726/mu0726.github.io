@@ -152,6 +152,72 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-sql知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/12/sql知识点/">sql知识点</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/12/sql知识点/" class="archive-article-date">
+  	<time datetime="2019-11-12T01:29:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><input disabled type="checkbox"> 一，distinct作用于所有列而不仅是紧跟在其后的一列<br>select prod_name from products<br>limit 5;#返回5行<br>select prod_name from products<br>limit 5 offset 5;                                      #返回从第5行起的5行数据：limit 开始 offset 行数<br>例：select prod_id,prod_price from products limit 3 OFFSET 1;//从offset限制第一行往后起，输出三行<br>二、注释<br>行内注释：–注释<br>行内注释：#注释<br>多行注释：/<em>注释</em>/<br>select prod_id,prod_price,prod_name from products<br>order by prod_price desc,prod_name;                   #对price降序，name升序，注意desc只应用到直接位于其前面的列名<br>select prod_name from products<br>where prod_price is null;                                         #检查空值<br> #in操作符，与or等价<br> #not操作符，否定跟在其后的条件，等价于：where vend_id &lt;&gt;’DLL01’<br>五、汇总数据<br>select avg(prod_price) as avg_price                     #avg()用于求均值，只用于单列，忽略列值为null的行<br>from products;<br>select count(*) as num_cust from customers;      #计算表中行的数目，不忽略空值<br>select count(cust_email) as num_cust                 #计算指定列中具有值的行数，掠过空值<br>from customers;<br>select max(prod_price） as max_price                #返回最大价格，忽略空值<br>from products;<br>select min(prod_price） as min_price                  #返回最低价格，忽略空值<br>from products;<br>select sum(quantity) as items_ordered                #求和，忽略空值<br>from orderitems;<br>七、子查询<br>select cust_id from orders<br>where order_num in(select order_num from orderitems<pre><code>where prod_id=&apos;RGAN01&apos;);               #由内向外执行</code></pre>等价于：<br>select order_num from orderitems<br>where prod_id=’RGAN01’;<br>八、联结表<br>#内连接（等值连接）<br>select vend_name,prod_name,prod_price<br>from vendors inner join products<br>on vendors.vend_id=products.vend_id;            #连接条件为vendors.vend_id=products.vend_id<br>等价于：<br>select vend_name,prod_name,prod_price<br>from vendors,products<br>where vendors.vend_id=products.vend_id;<br>#自连接<br>select c1.cust_id,c1.cust_name,c1.cust_contact<br>from customers as c1,customers as c2              #使用表别名<br>where c1.cust_name=c2.cust_name<br>and c2.cust_contact=’jim jones’;<br>等价于：<br>select cust_id,cust_name,cust_contact<br>from customers<br>where cust_name=(select cust_name <pre><code>from customers
+where cust_contact=&apos;jim jones&apos;);</code></pre>#外连接<br>select customers.cust_id,orders.order_num<br>from customers left outer join orders<br>on customers.cust_id=orders.cust_id;                 #左外连接，left指定from子句左边的表（customers)选择所有行</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/12/sql知识点/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-sql注意点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -768,81 +834,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/10/28/1028/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-关于jsp和servlet的理解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/28/关于jsp和servlet的理解/">关于jsp和servlet的理解</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/28/关于jsp和servlet的理解/" class="archive-article-date">
-  	<time datetime="2019-10-28T01:01:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>使用jdbc访问数据库步骤</strong>？<br>1.获取Connection对象。（DBConnection提供了数据库连接对象Connection）<br>2.sql语句<br>3.sql语句传入Connection，获取PrepareStatement对象<br>4.执行（execte）语句</p>
-<p><strong>JSP</strong></p>
-<p>html+css外部</p>
-<p>script内嵌</p>
-<p>  1,JSP内置对象（后台控制）</p>
-<p>​     （1）request             （5）out                  （9）exception</p>
-<p>​     （2）response          （6）pagecontext</p>
-<p>​     （3）session             （7）config</p>
-<p>​     （4）application       （8）page      </p>
-<p><strong>servlet</strong></p>
-<p>​            a .html →servlet→b.html</p>
-<p>​                                  ↓           ➷选择传输对象</p>
-<p>​                        tomcat服务器     c.html</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/28/关于jsp和servlet的理解/">展开全文 >></a>
         </p>
       
 

@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>sql注意点 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="1，  group by’应该放在‘where…and…’后面。 2、‘having’放在‘group by’后面和‘order by ’前面。(如果having后的条件与group by 的有关，只能用2，先group by 再having. 不能就可以用1，先where指明条件再group by 分组统计） 3、limit 0,1 从你的表中的第0个数据开始，只读取一个。（可以实现输出XX排">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sql注意点">
+<meta property="og:url" content="http://yoursite.com/2019/11/12/sql注意点/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1，  group by’应该放在‘where…and…’后面。 2、‘having’放在‘group by’后面和‘order by ’前面。(如果having后的条件与group by 的有关，只能用2，先group by 再having. 不能就可以用1，先where指明条件再group by 分组统计） 3、limit 0,1 从你的表中的第0个数据开始，只读取一个。（可以实现输出XX排">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-12T00:22:18.908Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="sql注意点">
+<meta name="twitter:description" content="1，  group by’应该放在‘where…and…’后面。 2、‘having’放在‘group by’后面和‘order by ’前面。(如果having后的条件与group by 的有关，只能用2，先group by 再having. 不能就可以用1，先where指明条件再group by 分组统计） 3、limit 0,1 从你的表中的第0个数据开始，只读取一个。（可以实现输出XX排">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,16 +154,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-sql注意点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-sql注意点" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/12/sql注意点/">sql注意点</a>
+    <h1 class="article-title" itemprop="name">
+      sql注意点
     </h1>
   
 
@@ -187,6 +189,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -194,16 +217,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/12/sql注意点/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/12/sql注意点/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/08/数据库常用增删改查语句/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据库常用增删改查语句</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -223,659 +305,14 @@
 
 
 
-
-  
-    <article id="post-数据库常用增删改查语句" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/08/数据库常用增删改查语句/">数据库常用增删改查语句</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/08/数据库常用增删改查语句/" class="archive-article-date">
-  	<time datetime="2019-11-08T02:44:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="增"><a href="#增" class="headerlink" title="增"></a>增</h4><ol>
-<li>新增一条数据<br>insert into 表名 values(全部列的值，用”,“分割);<br>insert into 表名 (字段1, 字段2) values (值1, 值2);</li>
-<li>新增多行数据<br>insert into 表名 values(全部列的值)，(全部列的值)….;<br>insert into 表名 (字段1, 字段2) values (值1, 值2),(值1, 值2),(值1, 值2)….;  </li>
-</ol>
-<h4 id="删"><a href="#删" class="headerlink" title="删"></a>删</h4><ol>
-<li>delete from 表名 where 条件;<br>注意：在修改或者删除数据的时候一定要指定条件，否则可能造成所有数据被污染或者清空。</li>
-<li>truncate 表名;<br>清空数据(会把全表都给清洗掉，并且自增主键从1开始)</li>
-</ol>
-<h4 id="改"><a href="#改" class="headerlink" title="改"></a>改</h4><ol>
-<li>update 表名 set 列1=值1，列2=值2，… where 条件;</li>
-</ol>
-<h4 id="查"><a href="#查" class="headerlink" title="查"></a>查</h4><ol>
-<li>select * from 表名;<br>select * from 表名 where 条件;<br>select 字段 (as 别名) from 表名 where 条件;<br>select * from 表名 where 字段 like ‘%值%’;</li>
-<li>左右连接查询（left outer join 的简写 left join）<br>select a.c from a left/right outer join b on a.d = b.d;<br>select a.c from a left/right  join b on a.d = b.d;</li>
-<li>内连接（inner join 简写 join）<br>select * from a inner join b on a.d = b.d;<br>select * from a join b on a.d = b.d;</li>
-<li>全连接（full outer join 简写 full join）<br>select * from a full outer jion b on a.d=b.d;<br>select * from a full  jion b on a.d=b.d;</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/08/数据库常用增删改查语句/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2019-11-16" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/06/2019-11-16/">2019-11-06</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/06/2019-11-16/" class="archive-article-date">
-  	<time datetime="2019-11-06T00:57:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>许</p>
-<p>广</p>
-<p>耀</p>
-<p>项</p>
-<p>目</p>
-<p>做</p>
-<p>之</p>
-<p>前</p>
-<p>要</p>
-<p>记</p>
-<p>得</p>
-<p>开</p>
-<p>数</p>
-<p>据</p>
-<p>库</p>
-<p>！</p>
-<p>！</p>
-<p>！</p>
-<p>JSP页面常见问题<br>1.重定向次数过多<br>&lt;c:if test=”${empty student }”&gt;&lt;c:redirect url=“Dostu”&gt;<br>在写这段代码时如表里面没数据或Dao报错未查到数据<br>它会不断在Servlet和页面之间跳转<br>页面会报一个重定向过多的异常<br>解决方法：在跳到查询数据页面之前先去中转页面获取一次<br>页面不跳转<br>流程示范:<br>-成功-获取数据-显示页面<br>登录-中转页面查询是否登录成功-结果<br>-失败-跳回<br>2.导入项目时Servlet报错<br>2.1.（Servlet左上角报错)<br>可能出现的错误：JRE报错<br>解决方法：右键项目-build path-confirgure build path -删掉报错的JRE<br>然后Add Library之后一直点NEXT就行<br>2.2.（控制台报错）<br>可能出现的错误：<br>Servlet重名<br>解决方法：找到重名的Servlet更改掉，跳转地址也要改（XML配置或页面上方）</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/06/2019-11-16/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-tomcat部分常见问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/05/tomcat部分常见问题/">tomcat部分常见问题</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/05/tomcat部分常见问题/" class="archive-article-date">
-  	<time datetime="2019-11-05T00:56:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="问题一："><a href="#问题一：" class="headerlink" title="问题一："></a>问题一：</h3><p>​           指定目录下没有访问的文件，这是最常见的，也是最容易解决的。只需要将访问的文件（如：a.html）放到指定目录下即可。</p>
-<h3 id="问题二："><a href="#问题二：" class="headerlink" title="问题二："></a>问题二：</h3><p>​         将访问的文件(如：b.html)放到了webapps的根目录下，然后访问<a href="http://localhost:8080/b.html，这种方式也会造成404错误，" target="_blank" rel="noopener">http://localhost:8080/b.html，这种方式也会造成404错误，</a>               解决方法是在webapps下新建一个目录（如：test），然后将b.html 放到test目录里面。访问网址  <a href="http://localhost:8080/test/b.html" target="_blank" rel="noopener">http://localhost:8080/test/b.html</a></p>
-<h3 id="问题三："><a href="#问题三：" class="headerlink" title="问题三："></a>问题三：</h3><p>​         访问的目录下的web.xml 文件内容有误。解放方法是可以直接删除web.xml或写入下面的内容  </p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/05/tomcat部分常见问题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-jsp试是什么？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/01/jsp试是什么？/">jsp试是什么？</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/01/jsp试是什么？/" class="archive-article-date">
-  	<time datetime="2019-11-01T05:29:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="JSP是什么？"><a href="#JSP是什么？" class="headerlink" title="JSP是什么？"></a>JSP是什么？</h1><p>每一种技术的名称都一定说明了它的作用。jsp的全称为：java server pages（翻译:java服务器页面），既然它是java的服务器页面，则它能支持java的代码编写的web页面（.jsp后缀结尾的html文件）。</p>
-<p>1、jsp在&lt;%, %&gt;中编写java代码</p>
-<p>2、既然它是java的服务器页面，那它就基于sun的JDK来执行，也就是说jsp文件是java文件的某种伪格式。</p>
-<p>3、jsp的运行。1、jsp在tomcat（以后介绍）发布，2、在浏览器访问过程中jsp会生成：jsp名称_jsp.java和jsp名称_jsp.class，这就验证了（2、），说明jsp在执行过程中先生成java文件再使用java语法编译，从而在jvm（虚拟机）执行。</p>
-<p>从上面可以看出，jsp是网站的view（视图），同时还能提供java的执行和显示结果。它的作用涵盖了html和java的功能。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/01/jsp试是什么？/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-1029" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/29/1029/">1029</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/29/1029/" class="archive-article-date">
-  	<time datetime="2019-10-29T00:33:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre><code># jsp/servlet异同点
- ##一,相同点：
- 处理后台逻辑，作为MVC控制；
- 9个内置对象（）。
- ##二，不同点：
- 1） jsp作为前端显示页面，servlet只能作为后台控制；
- 2） jsp常作为小型项目，servlet常作为大型项目
- 3） jsp可内嵌html，el，jstl，和java，而servlet只能有java；
- 4） jsp控制不需要项目中去注册，servlet必须注册</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/29/1029/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-”1028-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/28/”1028-1/">”1028</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/28/”1028-1/" class="archive-article-date">
-  	<time datetime="2019-10-28T02:58:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> 访问数据库步骤：<br>1 获取Connection对象（DBConnection提供数据库连接对象Connection）<br>2 sql语句<br>3sql语句传入Connection，获取PreparedStatement对象<br>4执行（execute）语句.</p>
-<p>JSP九大内置对象（后台逻辑控制）：</p>
-<p>request请求  respose相应 session会话 application 应用</p>
-<p> out pagecontext config page exception </p>
-<p>A.html-servlet-B.html</p>
-<p>-—–</p>
-<p>. servlet 是用来注册Servlet的存放地址 servlet-name 这个是我们要注册servlet的名字 servlet-class 这个就 </p>
-<p>是指向我们要注册的servlet 的类地址, 要带包路径。</p>
-<p>3 / 6 </p>
-<p>\2. servlet-mapping 是用来配置我们注册的组件的访问路径 </p>
-<p>\3. servlet-name 要与前面写的servlet的名字一致 </p>
-<p>\4. url-pattern 配置这个组件的访问路径</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/28/”1028-1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="”-”1028" class="article article-type-”  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/28/”1028/">”1028</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/28/”1028/" class="archive-article-date">
-  	<time datetime="2019-10-28T02:21:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  访问数据库步骤：<br>1 获取Connection对象（DBConnection提供数据库连接对象Connection）<br>2 sql语句<br>3sql语句传入Connection，获取PreparedStatement对象<br>4执行（execute）语句.</p>
-<p>JSP九大内置对象（后台逻辑控制）：</p>
-<p>request请求  respose相应 session会话 application 应用</p>
-<p> out pagecontext config page exception </p>
-<p>A.html-servlet-B.html</p>
-<p>-—–</p>
-<p>. servlet 是用来注册Servlet的存放地址 servlet-name 这个是我们要注册servlet的名字 servlet-class 这个就 </p>
-<p>是指向我们要注册的servlet 的类地址, 要带包路径。</p>
-<p>3 / 6 </p>
-<p>\2. servlet-mapping 是用来配置我们注册的组件的访问路径 </p>
-<p>\3. servlet-name 要与前面写的servlet的名字一致 </p>
-<p>\4. url-pattern 配置这个组件的访问路径</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/28/”1028/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="w-1028" class="article article-type-w  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/28/1028/">1028</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/28/1028/" class="archive-article-date">
-  	<time datetime="2019-10-28T02:07:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/28/1028/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-关于jsp和servlet的理解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/28/关于jsp和servlet的理解/">关于jsp和servlet的理解</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/28/关于jsp和servlet的理解/" class="archive-article-date">
-  	<time datetime="2019-10-28T01:01:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>使用jdbc访问数据库步骤</strong>？<br>1.获取Connection对象。（DBConnection提供了数据库连接对象Connection）<br>2.sql语句<br>3.sql语句传入Connection，获取PrepareStatement对象<br>4.执行（execte）语句</p>
-<p><strong>JSP</strong></p>
-<p>html+css外部</p>
-<p>script内嵌</p>
-<p>  1,JSP内置对象（后台控制）</p>
-<p>​     （1）request             （5）out                  （9）exception</p>
-<p>​     （2）response          （6）pagecontext</p>
-<p>​     （3）session             （7）config</p>
-<p>​     （4）application       （8）page      </p>
-<p><strong>servlet</strong></p>
-<p>​            a .html →servlet→b.html</p>
-<p>​                                  ↓           ➷选择传输对象</p>
-<p>​                        tomcat服务器     c.html</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/28/关于jsp和servlet的理解/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -898,8 +335,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

@@ -6,19 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Mvc结构 | Hexo</title>
+  <title>Archives: 2019/12 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Servlet负责跳转，调度，(服务员）Dao负责数据库增删改查（菜品）ServiceDAO负责数据库增删改查的结果数据的加工（厨师） M （model模型）DAO负责数据库增删改查的table（User为例），对应的实体类（User.Java）V （view视图）JSP页面（将跳转时传递到当前页面的数据，展示在当前页面中）C （controller控制器）Service(DAO负责数据库增删改查">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Mvc结构">
-<meta property="og:url" content="http://yoursite.com/2019/11/27/Mvc结构/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/archives/2019/12/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Servlet负责跳转，调度，(服务员）Dao负责数据库增删改查（菜品）ServiceDAO负责数据库增删改查的结果数据的加工（厨师） M （model模型）DAO负责数据库增删改查的table（User为例），对应的实体类（User.Java）V （view视图）JSP页面（将跳转时传递到当前页面的数据，展示在当前页面中）C （controller控制器）Service(DAO负责数据库增删改查">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-27T02:08:57.837Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mvc结构">
-<meta name="twitter:description" content="Servlet负责跳转，调度，(服务员）Dao负责数据库增删改查（菜品）ServiceDAO负责数据库增删改查的结果数据的加工（厨师） M （model模型）DAO负责数据库增删改查的table（User为例），对应的实体类（User.Java）V （view视图）JSP页面（将跳转时传递到当前页面的数据，展示在当前页面中）C （controller控制器）Service(DAO负责数据库增删改查">
+<meta name="twitter:title" content="Hexo">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,170 +150,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Mvc结构" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      Mvc结构
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/12/02/ELb表达式/" class="archive-article-date">
+  	<time datetime="2019-12-02T01:05:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-02</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/12/02/ELb表达式/">ELb表达式</a>
     </h1>
   
 
-        
-        <a href="/2019/11/27/Mvc结构/" class="archive-article-date">
-  	<time datetime="2019-11-27T02:08:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Servlet负责跳转，调度，(服务员）<br>Dao负责数据库增删改查（菜品）<br>ServiceDAO负责数据库增删改查的结果数据的加工（厨师）</p>
-<p>M （model模型）DAO负责数据库增删改查的table（User为例），对应的实体类（User.Java）<br>V （view视图）JSP页面（将跳转时传递到当前页面的数据，展示在当前页面中）<br>C （controller控制器）Service(DAO负责数据库增删改查的结果数据的加工) Servlet（决定调度跳转）到哪儿个页面。</p>
-<p>_JSP登录判定逻辑:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">public void doPost(HttpServletRequest request, HttpServletResponse response)</span><br><span class="line">		throws ServletException, IOException &#123;</span><br><span class="line">	System.out.println(&quot;------loginAction------&quot;);</span><br><span class="line">	request.setCharacterEncoding(&quot;UTF-8&quot;);</span><br><span class="line">	response.setCharacterEncoding(&quot;UTF-8&quot;);</span><br><span class="line">	response.setContentType(&quot;text/html; charset=UTF-8&quot;);</span><br><span class="line">	String username=request.getParameter(&quot;username&quot;);//从页面中获取</span><br><span class="line">	String password=request.getParameter(&quot;password&quot;);</span><br><span class="line">	System.out.println(&quot;获取login.jsp页面中的username &quot;+ username);</span><br><span class="line">	System.out.println(&quot;获取login.jsp页面中的password &quot;+ password);</span><br><span class="line">	System.out.println(&quot;登陆验证中...&quot;);</span><br><span class="line">	//连接并查询数据库</span><br><span class="line">	String sql = &quot;select * from user&quot;;</span><br><span class="line">	try &#123;</span><br><span class="line">		//获取数据查询数据</span><br><span class="line">		ResultSet rs;</span><br><span class="line">		String sqlusername = rs.getString(&quot;username&quot;);</span><br><span class="line">		String sqlpassword = rs.getString(&quot;password&quot;);</span><br><span class="line">		String sqlname = rs.getString(&quot;name&quot;);</span><br><span class="line">		boolean flag = false;</span><br><span class="line">		//对比数据，判定登录</span><br><span class="line">		while(rs.next()) &#123;</span><br><span class="line">			if(sqlusername.equals(username) &amp;&amp; sqlpassword.equals(password)) &#123;</span><br><span class="line">				//放入用户信息到Session后，跳转</span><br><span class="line">				HttpSession session = request.getSession();</span><br><span class="line">				session.setAttribute(&quot;username&quot;, username);</span><br><span class="line">				session.setAttribute(&quot;password&quot;, sqlpassword);</span><br><span class="line">				session.setAttribute(&quot;name&quot;, sqlname);</span><br><span class="line">				response.sendRedirect(&quot;sucess.jsp&quot;);</span><br><span class="line">				flag= true;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		//登录失败</span><br><span class="line">		if(flag==false) &#123;</span><br><span class="line">			//跳转回登录页面</span><br><span class="line">			response.sendRedirect(&quot;login.jsp&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; catch (SQLException e) &#123;</span><br><span class="line">		// TODO 自动生成的 catch 块</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+        <div class="article-info info-on-right">
+          
+          
 
-<p>}</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/27/Mvc结构/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/12/02/ELb表达式/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          ELb表达式
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/11/27/Mac结构/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Mac结构</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -340,8 +215,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

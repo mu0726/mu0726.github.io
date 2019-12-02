@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Mvc结构 | Hexo</title>
+  <title>ELb表达式 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Servlet负责跳转，调度，(服务员）Dao负责数据库增删改查（菜品）ServiceDAO负责数据库增删改查的结果数据的加工（厨师） M （model模型）DAO负责数据库增删改查的table（User为例），对应的实体类（User.Java）V （view视图）JSP页面（将跳转时传递到当前页面的数据，展示在当前页面中）C （controller控制器）Service(DAO负责数据库增删改查">
+  <meta name="description" content="EL表达式:用于替代jsp页面中的Java代码优势:    不需要像java一样,    进行强制类型转换,    不需要处理null在EL中直接显示为空白    简洁    不需要&amp;lt;%%&amp;gt;表签,直接嵌入到jsp代码中    防止代码参杂 用法:    ${域对象.域对象中的属性.属性.属性.,,,,,,,,,,,,,,,,,,,,,,,,,}        &amp;lt;不能包括特殊字符如">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mvc结构">
-<meta property="og:url" content="http://yoursite.com/2019/11/27/Mvc结构/index.html">
+<meta property="og:title" content="ELb表达式">
+<meta property="og:url" content="http://yoursite.com/2019/12/02/ELb表达式/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Servlet负责跳转，调度，(服务员）Dao负责数据库增删改查（菜品）ServiceDAO负责数据库增删改查的结果数据的加工（厨师） M （model模型）DAO负责数据库增删改查的table（User为例），对应的实体类（User.Java）V （view视图）JSP页面（将跳转时传递到当前页面的数据，展示在当前页面中）C （controller控制器）Service(DAO负责数据库增删改查">
+<meta property="og:description" content="EL表达式:用于替代jsp页面中的Java代码优势:    不需要像java一样,    进行强制类型转换,    不需要处理null在EL中直接显示为空白    简洁    不需要&amp;lt;%%&amp;gt;表签,直接嵌入到jsp代码中    防止代码参杂 用法:    ${域对象.域对象中的属性.属性.属性.,,,,,,,,,,,,,,,,,,,,,,,,,}        &amp;lt;不能包括特殊字符如">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-27T02:08:57.837Z">
+<meta property="og:updated_time" content="2019-12-02T01:06:22.109Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mvc结构">
-<meta name="twitter:description" content="Servlet负责跳转，调度，(服务员）Dao负责数据库增删改查（菜品）ServiceDAO负责数据库增删改查的结果数据的加工（厨师） M （model模型）DAO负责数据库增删改查的table（User为例），对应的实体类（User.Java）V （view视图）JSP页面（将跳转时传递到当前页面的数据，展示在当前页面中）C （controller控制器）Service(DAO负责数据库增删改查">
+<meta name="twitter:title" content="ELb表达式">
+<meta name="twitter:description" content="EL表达式:用于替代jsp页面中的Java代码优势:    不需要像java一样,    进行强制类型转换,    不需要处理null在EL中直接显示为空白    简洁    不需要&amp;lt;%%&amp;gt;表签,直接嵌入到jsp代码中    防止代码参杂 用法:    ${域对象.域对象中的属性.属性.属性.,,,,,,,,,,,,,,,,,,,,,,,,,}        &amp;lt;不能包括特殊字符如">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,32 +154,50 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Mvc结构" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ELb表达式" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Mvc结构
+      ELb表达式
     </h1>
   
 
         
-        <a href="/2019/11/27/Mvc结构/" class="archive-article-date">
-  	<time datetime="2019-11-27T02:08:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
+        <a href="/2019/12/02/ELb表达式/" class="archive-article-date">
+  	<time datetime="2019-12-02T01:05:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Servlet负责跳转，调度，(服务员）<br>Dao负责数据库增删改查（菜品）<br>ServiceDAO负责数据库增删改查的结果数据的加工（厨师）</p>
-<p>M （model模型）DAO负责数据库增删改查的table（User为例），对应的实体类（User.Java）<br>V （view视图）JSP页面（将跳转时传递到当前页面的数据，展示在当前页面中）<br>C （controller控制器）Service(DAO负责数据库增删改查的结果数据的加工) Servlet（决定调度跳转）到哪儿个页面。</p>
-<p>_JSP登录判定逻辑:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">public void doPost(HttpServletRequest request, HttpServletResponse response)</span><br><span class="line">		throws ServletException, IOException &#123;</span><br><span class="line">	System.out.println(&quot;------loginAction------&quot;);</span><br><span class="line">	request.setCharacterEncoding(&quot;UTF-8&quot;);</span><br><span class="line">	response.setCharacterEncoding(&quot;UTF-8&quot;);</span><br><span class="line">	response.setContentType(&quot;text/html; charset=UTF-8&quot;);</span><br><span class="line">	String username=request.getParameter(&quot;username&quot;);//从页面中获取</span><br><span class="line">	String password=request.getParameter(&quot;password&quot;);</span><br><span class="line">	System.out.println(&quot;获取login.jsp页面中的username &quot;+ username);</span><br><span class="line">	System.out.println(&quot;获取login.jsp页面中的password &quot;+ password);</span><br><span class="line">	System.out.println(&quot;登陆验证中...&quot;);</span><br><span class="line">	//连接并查询数据库</span><br><span class="line">	String sql = &quot;select * from user&quot;;</span><br><span class="line">	try &#123;</span><br><span class="line">		//获取数据查询数据</span><br><span class="line">		ResultSet rs;</span><br><span class="line">		String sqlusername = rs.getString(&quot;username&quot;);</span><br><span class="line">		String sqlpassword = rs.getString(&quot;password&quot;);</span><br><span class="line">		String sqlname = rs.getString(&quot;name&quot;);</span><br><span class="line">		boolean flag = false;</span><br><span class="line">		//对比数据，判定登录</span><br><span class="line">		while(rs.next()) &#123;</span><br><span class="line">			if(sqlusername.equals(username) &amp;&amp; sqlpassword.equals(password)) &#123;</span><br><span class="line">				//放入用户信息到Session后，跳转</span><br><span class="line">				HttpSession session = request.getSession();</span><br><span class="line">				session.setAttribute(&quot;username&quot;, username);</span><br><span class="line">				session.setAttribute(&quot;password&quot;, sqlpassword);</span><br><span class="line">				session.setAttribute(&quot;name&quot;, sqlname);</span><br><span class="line">				response.sendRedirect(&quot;sucess.jsp&quot;);</span><br><span class="line">				flag= true;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		//登录失败</span><br><span class="line">		if(flag==false) &#123;</span><br><span class="line">			//跳转回登录页面</span><br><span class="line">			response.sendRedirect(&quot;login.jsp&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; catch (SQLException e) &#123;</span><br><span class="line">		// TODO 自动生成的 catch 块</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+        <p>EL表达式:用于替代jsp页面中的Java代码<br>优势:<br>    不需要像java一样,<br>    进行强制类型转换,<br>    不需要处理null在EL中直接显示为空白<br>    简洁<br>    不需要&lt;%%&gt;表签,直接嵌入到jsp代码中<br>    防止代码参杂</p>
+<p>用法:<br>    ${域对象.域对象中的属性.属性.属性.,,,,,,,,,,,,,,,,,,,,,,,,,}<br>        &lt;不能包括特殊字符如.&gt;<br>          or<br>    ${域对象[‘域对象中的属性’][‘属性’][‘属性’].,,,,,,,,,,,,,,,,,,,,,,,,,}<br>        &lt;能包括特殊字符如.&gt;<br>        &lt;可获取变量值 ,这时[]中不加引号’’    加’’认为是常量&gt;<br>        &lt;可获取数组元素  stu[1],stu[2]…….&gt;</p>
+<pre><code> 获取Map属性
+${域对象.域对象中的map对象.属性名}
+    or
+${域对象.域对象中的map对象[&apos;属性名&apos;]}
 
-<p>}</p>
+可直接在EL中计算:
+    gt    ne    eq    le    ge    lt
+    ${3 &gt; 2},${3 != 2},${3 == 2},${3 &lt;= 2},${3 &gt;= 2},${3 &lt; 2},
+
+    or    and    not
+    ${3 || 2},${3 &amp;&amp; 2}${3 ! 2},
+
+Empty运算符:用于判断一个值是否存在   存在有值返回false  / 为null或其他情况或不存在反回true 
+    ${empty 域对象.域对象中的map对象.属性名}</code></pre><p>EL表达式的隐式对象:<br>    a.作用域访问对象(EL  域对象)*<br>    pageScope    requestScope    sessionScope    applicationScope<br>    若用El取值时不指定域对象,则根据从    小范围   到   大范围    的顺序   依次取值<br>    如: ${requestScope.域对象中的map对象[‘属性名’]}</p>
+<ol>
+<li><p>b.参数访问对象<br>用于获取表单数据${param}            ${oaramValues}<br>   对应于               repuest.getParameter()        repuest.getParameterValues()</p>
+<pre><code>单个表单数据            表单数组数据&lt;复选框..&gt;</code></pre><p>如: ${param.数据名}      ${param.数组数据名}    </p>
+<p>也可获取超链接中传的值,地址栏中的值</p>
+<p>c.JSP隐式对象</p>
+<pre><code>pageContext</code></pre><p>通过此pageContext对象可拿到JSP中任意常见隐式对象<br>如:  ${pageContext.session.下一个方法或对象…}    &lt;不是.getSession()&gt;</p>
+</li>
+</ol>
 
       
 
@@ -259,7 +277,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/27/Mvc结构/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/02/ELb表达式/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -273,18 +291,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/12/02/ELb表达式/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          ELb表达式
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/11/27/Mac结构/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Mac结构</div>
+    <a href="/2019/11/27/Mvc结构/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Mvc结构</div>
       <i class="icon-circle-right"></i>
     </a>
   

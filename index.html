@@ -152,6 +152,92 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ELb表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/02/ELb表达式/">ELb表达式</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/02/ELb表达式/" class="archive-article-date">
+  	<time datetime="2019-12-02T01:05:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>EL表达式:用于替代jsp页面中的Java代码<br>优势:<br>    不需要像java一样,<br>    进行强制类型转换,<br>    不需要处理null在EL中直接显示为空白<br>    简洁<br>    不需要&lt;%%&gt;表签,直接嵌入到jsp代码中<br>    防止代码参杂</p>
+<p>用法:<br>    ${域对象.域对象中的属性.属性.属性.,,,,,,,,,,,,,,,,,,,,,,,,,}<br>        &lt;不能包括特殊字符如.&gt;<br>          or<br>    ${域对象[‘域对象中的属性’][‘属性’][‘属性’].,,,,,,,,,,,,,,,,,,,,,,,,,}<br>        &lt;能包括特殊字符如.&gt;<br>        &lt;可获取变量值 ,这时[]中不加引号’’    加’’认为是常量&gt;<br>        &lt;可获取数组元素  stu[1],stu[2]…….&gt;</p>
+<pre><code> 获取Map属性
+${域对象.域对象中的map对象.属性名}
+    or
+${域对象.域对象中的map对象[&apos;属性名&apos;]}
+
+可直接在EL中计算:
+    gt    ne    eq    le    ge    lt
+    ${3 &gt; 2},${3 != 2},${3 == 2},${3 &lt;= 2},${3 &gt;= 2},${3 &lt; 2},
+
+    or    and    not
+    ${3 || 2},${3 &amp;&amp; 2}${3 ! 2},
+
+Empty运算符:用于判断一个值是否存在   存在有值返回false  / 为null或其他情况或不存在反回true 
+    ${empty 域对象.域对象中的map对象.属性名}</code></pre><p>EL表达式的隐式对象:<br>    a.作用域访问对象(EL  域对象)*<br>    pageScope    requestScope    sessionScope    applicationScope<br>    若用El取值时不指定域对象,则根据从    小范围   到   大范围    的顺序   依次取值<br>    如: ${requestScope.域对象中的map对象[‘属性名’]}</p>
+<ol>
+<li><p>b.参数访问对象<br>用于获取表单数据${param}            ${oaramValues}<br>   对应于               repuest.getParameter()        repuest.getParameterValues()</p>
+<pre><code>单个表单数据            表单数组数据&lt;复选框..&gt;</code></pre><p>如: ${param.数据名}      ${param.数组数据名}    </p>
+<p>也可获取超链接中传的值,地址栏中的值</p>
+<p>c.JSP隐式对象</p>
+<pre><code>pageContext</code></pre><p>通过此pageContext对象可拿到JSP中任意常见隐式对象<br>如:  ${pageContext.session.下一个方法或对象…}    &lt;不是.getSession()&gt;</p>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/02/ELb表达式/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Mvc结构" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -754,76 +840,6 @@ where cust_contact=&apos;jim jones&apos;);</code></pre>#外连接<br>select cust
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/11/01/jsp试是什么？/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-1029" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/29/1029/">1029</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/29/1029/" class="archive-article-date">
-  	<time datetime="2019-10-29T00:33:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre><code># jsp/servlet异同点
- ##一,相同点：
- 处理后台逻辑，作为MVC控制；
- 9个内置对象（）。
- ##二，不同点：
- 1） jsp作为前端显示页面，servlet只能作为后台控制；
- 2） jsp常作为小型项目，servlet常作为大型项目
- 3） jsp可内嵌html，el，jstl，和java，而servlet只能有java；
- 4） jsp控制不需要项目中去注册，servlet必须注册</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/29/1029/">展开全文 >></a>
         </p>
       
 

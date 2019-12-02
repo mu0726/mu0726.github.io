@@ -152,6 +152,99 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-MYSQL分页（sql）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/02/MYSQL分页（sql）/">MYSQL分页（sql）</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/02/MYSQL分页（sql）/" class="archive-article-date">
+  	<time datetime="2019-12-02T01:13:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>要实现分页要严格依赖SQL语句:<br>    前提:知道    那一页的数据从  何处开始   从  何处结束  </p>
+<pre><code>   使用sql关键字  limit n,x;
+    *(第n行开始  取 x条数据)*
+
+第n页            开始行号            结束行号    
+1            0            9
+2            10            19
+3            20            29
+.............................
+n            (n-1)*10            n*10-1
+
+转化为sql语句为:
+    select * from user limit 0,10;
+    select * from user limit 10,10;
+    select * from user limit 20,10;
+    .................................
+    select * from user limit (n-1)*10,10;
+
+即:   select * from user limit  &lt;页数*页面大小(每页行数)&gt;,&lt;页面大小(每页行数)&gt;;</code></pre><p>在dao及servle中使用:</p>
+<pre><code>需要数据:&lt;顺序&gt;
+    1.数据总量                &lt;查询数据库得知,select count(*)...;用rs保存&gt;
+    2.页面大小(每页行数)                &lt;自定义&gt;
+    3.总页数                    &lt;程序计算&gt;
+    总页数= 100/20=数据总数/页面大小=5页
+    总页数= 103/20=数据总数/页面大小=5.6--&gt;5+1页
+    总页数=数据总数%页面大小==0? 数据总数/页面大小:数据总数/页面大小+1
+    判断是否除尽根据是否除尽,执行不同操作
+
+    4.当前页码                &lt;自定义&gt;
+    由jsp页面传入
+
+    5.当前页所显示的数据对象集合(实体类集合)    &lt;查询得知&gt;</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/02/MYSQL分页（sql）/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-ELb表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -773,73 +866,6 @@ where cust_contact=&apos;jim jones&apos;);</code></pre>#外连接<br>select cust
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/11/05/tomcat部分常见问题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-jsp试是什么？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/01/jsp试是什么？/">jsp试是什么？</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/01/jsp试是什么？/" class="archive-article-date">
-  	<time datetime="2019-11-01T05:29:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="JSP是什么？"><a href="#JSP是什么？" class="headerlink" title="JSP是什么？"></a>JSP是什么？</h1><p>每一种技术的名称都一定说明了它的作用。jsp的全称为：java server pages（翻译:java服务器页面），既然它是java的服务器页面，则它能支持java的代码编写的web页面（.jsp后缀结尾的html文件）。</p>
-<p>1、jsp在&lt;%, %&gt;中编写java代码</p>
-<p>2、既然它是java的服务器页面，那它就基于sun的JDK来执行，也就是说jsp文件是java文件的某种伪格式。</p>
-<p>3、jsp的运行。1、jsp在tomcat（以后介绍）发布，2、在浏览器访问过程中jsp会生成：jsp名称_jsp.java和jsp名称_jsp.class，这就验证了（2、），说明jsp在执行过程中先生成java文件再使用java语法编译，从而在jvm（虚拟机）执行。</p>
-<p>从上面可以看出，jsp是网站的view（视图），同时还能提供java的执行和显示结果。它的作用涵盖了html和java的功能。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/01/jsp试是什么？/">展开全文 >></a>
         </p>
       
 
